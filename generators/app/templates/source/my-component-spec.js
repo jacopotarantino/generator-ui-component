@@ -8,7 +8,7 @@ describe('MyComponent', () => {
 
   beforeEach(() => {
     let header = document.createElement('div')
-    header.id = 'the-knot'
+    header.id = 'the-header'
     document.body.appendChild(header)
 
     my_component = new MyComponent([{
@@ -18,11 +18,11 @@ describe('MyComponent', () => {
   })
 
   afterEach(() => {
+    let header = document.getElementById('the-header')
+    header.parentNode.removeChild(header)
+
     let node = document.querySelector('.my-component')
     if (node) { node.parentNode.removeChild(node) }
-
-    let header = document.getElementById('the-knot')
-    header.parentNode.removeChild(header)
   })
 
   it('sanity check', () => {
@@ -30,7 +30,7 @@ describe('MyComponent', () => {
   })
 
   describe('#render', () => {
-    it('should render the contextual subnav onto the page', () => {
+    it('should render my custom component onto the page', () => {
       my_component.render()
       let node = document.querySelector('.my-component')
 

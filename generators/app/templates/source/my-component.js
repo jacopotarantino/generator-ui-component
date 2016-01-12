@@ -6,7 +6,7 @@ import { UIComponent } from './ui-component.js'
  * Provides assistance that doesn't need to be in the class.
  */
 function my_helper_or_private_function (items) {
-  return `<ul class='list-horizontal'>some markup</ul>`
+  return `<ul class="list-horizontal">some markup</ul>`
 }
 
 export class MyComponent extends UIComponent {
@@ -29,7 +29,7 @@ export class MyComponent extends UIComponent {
    * Puts this component on the page with a custom render method.
    */
   render () {
-    let header = document.querySelector('#the-knot')
+    let header = document.querySelector('#the-header')
     header
       .parentNode
       .insertBefore(this.node, header.nextSibling)
