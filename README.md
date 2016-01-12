@@ -1,5 +1,8 @@
-# generator-ui-component [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Scaffolds a UI Component with ES6, tests, and webpack+babel build.
+# generator-ui-component
+
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+
+> Scaffolds a UI Component with ES6, tests, and webpack+babel build. Initializes a git repository. Creates a minimal build process that you can get started with immediately.
 
 ## Installation
 
@@ -13,7 +16,21 @@ npm install -g generator-ui-component
 Then generate your new project:
 
 ```bash
+mkdir my-fancy-component && cd $_
 yo ui-component
+```
+
+Make sure to run the sample test suite to make sure things are working as expected:
+
+```bash
+npm test
+```
+
+Then get started working. A basic `index.html` file is provided for you to prove out your UI component as quickly as possible.
+
+```bash
+open index.html
+npm start
 ```
 
 ## Getting To Know Yeoman
