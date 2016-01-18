@@ -10,7 +10,7 @@ module.exports = yeoman.generators.Base.extend({
   prompting: function () {
     var done = this.async()
     var that = this
-    let prompts = [{
+    var prompts = [{
       type: 'input',
       name: 'component_name',
       message: 'What is the component name?',
@@ -51,7 +51,7 @@ module.exports = yeoman.generators.Base.extend({
 
     // for each file in templates
     // copy and parse templates
-    files.forEach((filename, index, array) => {
+    files.forEach(function (filename, index, array) {
       this.template(
         this.templatePath(filename),
         this.destinationPath(filename),
@@ -64,7 +64,7 @@ module.exports = yeoman.generators.Base.extend({
       .addRemote('origin', this.props.repository_path)
       .add(['.'])
       .commit('Initialized repository')
-      .then(() => {
+      .then(function () {
         that.log(yosay('Initialized the git repository for you!'))
         done()
       })

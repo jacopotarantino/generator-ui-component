@@ -1,6 +1,12 @@
 # generator-ui-component
 
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+[npm-image]: https://badge.fury.io/js/generator-ui-component.svg
+[npm-url]: https://npmjs.org/package/generator-ui-component
+[travis-image]: https://travis-ci.org/jacopotarantino/generator-ui-component.svg?branch=master
+[travis-url]: https://travis-ci.org/jacopotarantino/generator-ui-component
+[daviddm-image]: https://david-dm.org/jacopotarantino/generator-ui-component.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/jacopotarantino/generator-ui-component
 
 > Scaffolds a UI Component with ES6, tests, and webpack+babel build. Initializes a git repository. Creates a minimal build process that you can get started with immediately.
 
@@ -33,18 +39,6 @@ open index.html
 npm start
 ```
 
-## Getting To Know Yeoman
-
-Yeoman has a heart of gold. He&#39;s a person with feelings and opinions, but he&#39;s very easy to work with. If you think he&#39;s too opinionated, he can be easily convinced. Feel free to [learn more about him](http://yeoman.io/).
-
 ## License
 
- © [Jack](https://jack.ofspades.com)
-
-
-[npm-image]: https://badge.fury.io/js/generator-ui-component.svg
-[npm-url]: https://npmjs.org/package/generator-ui-component
-[travis-image]: https://travis-ci.org/jacopotarantino/generator-ui-component.svg?branch=master
-[travis-url]: https://travis-ci.org/jacopotarantino/generator-ui-component
-[daviddm-image]: https://david-dm.org/jacopotarantino/generator-ui-component.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/jacopotarantino/generator-ui-component
+ All content copyright © [Jacopo Tarantino](https://jack.ofspades.com). This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit [http://creativecommons.org/licenses/by-sa/4.0/deed.en_US](http://creativecommons.org/licenses/by-sa/4.0/deed.en_US).
