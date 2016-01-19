@@ -8,7 +8,7 @@
 [daviddm-image]: https://david-dm.org/jacopotarantino/generator-ui-component.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/jacopotarantino/generator-ui-component
 
-> Scaffolds a UI Component with ES6, tests, and webpack+babel build. Initializes a git repository. Creates a minimal build process that you can get started with immediately.
+> Scaffolds a UI Component with ES6, tests, and webpack+babel build. Initializes a git repository. Creates a minimal build process that you can get started with immediately. Includes the CSS and Sass loaders so you can write your styles cleanly and import them just like node modules.
 
 ## Installation
 
