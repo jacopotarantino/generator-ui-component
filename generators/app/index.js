@@ -52,10 +52,10 @@ module.exports = yeoman.generators.Base.extend({
     // for each file in templates
     // copy and parse templates
     files.forEach(function (filename, index, array) {
-      this.template(
-        this.templatePath(filename),
-        this.destinationPath(filename),
-        this.props
+      that.template(
+        that.templatePath(filename),
+        that.destinationPath(filename),
+        that.props
       )
     })
 
