@@ -19,6 +19,11 @@ export class UIComponent {
    * Puts the stylesheet for the contextual subnav on the page.
    */
   render () {
+    let stylesheet = document.createElement('style')
+    stylesheet.innerHTML = this.styles || ''
+    this.stylesheet = stylesheet
+    document.body.appendChild(stylesheet)
+
     document.body.appendChild(this.node)
   }
 
@@ -27,5 +32,6 @@ export class UIComponent {
    */
   remove () {
     this.node.parentNode.removeChild(this.node)
+    this.node.parentNode.removeChild(this.stylesheet)
   }
 }

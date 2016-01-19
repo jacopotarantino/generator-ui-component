@@ -1,6 +1,7 @@
 'use strict'
 
 import { UIComponent } from './ui-component.js'
+import component_styles from './styles.sass'
 
 /*
  * Provides assistance that doesn't need to be in the class.
@@ -17,6 +18,8 @@ export class MyComponent extends UIComponent {
    */
   constructor (items) {
     super()
+
+    this.styles = component_styles
 
     let my_component = document.createElement('nav')
     my_component.classList.add('my-component')

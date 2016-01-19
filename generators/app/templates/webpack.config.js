@@ -15,6 +15,9 @@ module.exports = {
       query: {
         presets: ['es2015']
       }
+    }, {
+      test: /\.sass$/,
+      loaders: ['css', 'sass?indentedSyntax=true']
     }]
   },
   plugins: [
