@@ -7,7 +7,8 @@
   "license": "UNLICENSED",
   "author": "<%= author_name %> <<%= author_email %>>",
   "scripts": {
-    "test": "npm run-script jsdoc && npm run-script build && ./node_modules/.bin/standard && karma start",
+    "test": "npm run-script lint && ./node_modules/.bin/karma start",
+    "lint": "./node_modules/.bin/standard",
     "jsdoc": "./node_modules/.bin/jsdoc -p ./source/*.js -d docs",
     "build": "./node_modules/.bin/webpack -p -d",
     "start": "./node_modules/.bin/webpack -p -d --watch"
@@ -18,6 +19,9 @@
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "css-loader": "^0.23.1",
+    "es6-promise": "3.0.2",
+    "jade": "^1.11.0",
+    "jade-loader": "^0.8.0",
     "jasmine-core": "^2.4.1",
     "jsdoc": "^3.4.0",
     "karma": "^0.13.19",

@@ -1,5 +1,6 @@
-// Karma configuration
-// Generated on Wed Jan 06 2016 15:22:25 GMT-0500 (EST)
+'use strict'
+
+const JSDocPlugin = require('./lib/jsdoc-plugin.js')
 
 module.exports = function (config) {
   config.set({
@@ -26,9 +27,16 @@ module.exports = function (config) {
           test: /\.js/,
           exclude: /node_modules/,
           loader: 'babel-loader'
+        }, {
+          test: /\.sass$/,
+          loaders: ['css', 'sass?indentedSyntax=true']
+        }, {
+          test: /\.jade$/,
+          loader: 'jade'
         }]
       },
-      watch: true
+      watch: true,
+      plugins: [ new JSDocPlugin() ]
     },
     webpackServer: {
       noInfo: true

@@ -32,6 +32,6 @@ export class UIComponent {
    */
   remove () {
     this.node.parentNode.removeChild(this.node)
-    this.node.parentNode.removeChild(this.stylesheet)
+    this.stylesheet.parentNode.removeChild(this.stylesheet)
   }
 }

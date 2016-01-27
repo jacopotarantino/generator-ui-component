@@ -2,6 +2,7 @@
 
 import { UIComponent } from './ui-component.js'
 import component_styles from './styles.sass'
+import large_markup_blob from './large-markup-block.jade'
 
 /*
  * Provides assistance that doesn't need to be in the class.
@@ -36,5 +37,9 @@ export class MyComponent extends UIComponent {
     header
       .parentNode
       .insertBefore(this.node, header.nextSibling)
+
+    let new_node = document.createElement('section')
+    new_node.innerHTML = large_markup_blob
+    document.body.appendChild(new_node)
   }
 }

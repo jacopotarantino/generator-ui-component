@@ -1,6 +1,6 @@
 {
   "name": "generator-ui-component",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Scaffolds a UI Component with ES6, tests, and webpack+babel build.",
   "homepage": "https://jack.ofspades.com",
   "author": {

@@ -1,6 +1,8 @@
 'use strict'
 
-var LiveReloadPlugin = require('webpack-livereload-plugin')
+const LiveReloadPlugin = require('webpack-livereload-plugin')
+const JSDocPlugin = require('./lib/jsdoc-plugin.js')
+require('es6-promise').polyfill()
 
 module.exports = {
   entry: './index.js',
@@ -18,9 +20,13 @@ module.exports = {
     }, {
       test: /\.sass$/,
       loaders: ['css', 'sass?indentedSyntax=true']
+    }, {
+      test: /\.jade$/,
+      loader: 'jade'
     }]
   },
   plugins: [
-    new LiveReloadPlugin()
+    new LiveReloadPlugin(),
+    new JSDocPlugin()
   ]
 }

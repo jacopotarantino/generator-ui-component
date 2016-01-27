@@ -21,6 +21,9 @@ describe('UIComponent', () => {
   afterEach(() => {
     let node = document.querySelector('.fake-component')
     if (node) { node.parentNode.removeChild(node) }
+
+    let stylesheet = document.querySelector('style')
+    if (stylesheet) { stylesheet.parentNode.removeChild(stylesheet) }
   })
 
   it('sanity check', () => {
