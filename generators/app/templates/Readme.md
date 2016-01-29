@@ -2,6 +2,12 @@
 
 This creates a new <%= component_name %>
 
+## Prerequisites
+
+* node
+* npm
+* Java
+
 ## Install and run
 
 * `git clone <%= repository_path %>`

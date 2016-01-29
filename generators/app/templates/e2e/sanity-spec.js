@@ -1,6 +1,6 @@
 'use strict'
 
-const page_title = 'Welcome to the demo page for: theknot-ui-membership-modal'
+const page_title = 'Welcome to the demo page for: <%= component_name %>'
 
 // Describe a feature
 describe('my page', function() {

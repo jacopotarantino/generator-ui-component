@@ -39,7 +39,8 @@ export class MyComponent extends UIComponent {
       .insertBefore(this.node, header.nextSibling)
 
     let new_node = document.createElement('section')
-    new_node.innerHTML = large_markup_blob
+    // note that jade templates come back as template functions
+    new_node.innerHTML = large_markup_blob()
     document.body.appendChild(new_node)
   }
 }
