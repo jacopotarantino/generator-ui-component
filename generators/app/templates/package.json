@@ -46,7 +46,8 @@
     "ignore": [
       "docs/",
       "dist",
-      "**/*-spec.js"
+      "**/*-spec.js",
+      "protractor.config.js"
     ]
   }
 }
