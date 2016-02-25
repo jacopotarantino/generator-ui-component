@@ -1,3 +1,4 @@
+/* eslint-env jasmine */
 'use strict'
 
 let component
@@ -13,7 +14,6 @@ class FakeComponent extends UIComponent {
 }
 
 describe('UIComponent', () => {
-
   beforeEach(() => {
     component = new FakeComponent()
   })
@@ -51,5 +51,4 @@ describe('UIComponent', () => {
       expect(node).toBe(null)
     })
   })
-
 })
