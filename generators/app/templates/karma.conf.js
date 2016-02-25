@@ -8,7 +8,7 @@ module.exports = function (config) {
     basePath: '',
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'es6-shim'],
     // list of files / patterns to load in the browser
     files: [{
       pattern: 'test-context.js',
