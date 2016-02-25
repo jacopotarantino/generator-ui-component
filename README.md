@@ -41,4 +41,24 @@ npm start
 
 ## License
 
- All content copyright © [Jacopo Tarantino](https://jack.ofspades.com). This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit [http://creativecommons.org/licenses/by-sa/4.0/deed.en_US](http://creativecommons.org/licenses/by-sa/4.0/deed.en_US).
+All content copyright © [Jacopo Tarantino](https://jack.ofspades.com). This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit [http://creativecommons.org/licenses/by-sa/4.0/deed.en_US](http://creativecommons.org/licenses/by-sa/4.0/deed.en_US).
+
+## TODO
+
+* Tests for the generator itself
+* Boilerplate CI integration
+  * Automatically connect to CI?
+* Support for react/polymer/angular/events/pouchdb/isomorphism
+* Github pages support
+* Support for codeclimate
+  * Automatic setup
+  * automatic sending of code coverage stats
+* [semantic release](https://github.com/semantic-release/semantic-release)
+   * for both the generator and the generated output
+* [commitizen](http://commitizen.github.io/cz-cli/)
+* [david](https://david-dm.org/)
+* readme badges
+* [browser sync](https://github.com/Browsersync/browser-sync)?
+* replace livereload with that and parallelshell
+  * https://github.com/keithamus/parallelshell
+  * https://css-tricks.com/why-npm-scripts/
