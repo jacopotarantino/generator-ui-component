@@ -26,7 +26,16 @@ module.exports = function (config) {
         loaders: [{
           test: /\.js/,
           exclude: /node_modules/,
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          query: {
+            plugins: [
+              'transform-runtime',
+              'add-module-exports',
+              'transform-decorators-legacy'
+            ],
+            presets: ['es2015', 'stage-0'],
+            cacheDirectory: './.tmp'
+          }
         }, {
           test: /\.sass$/,
           loaders: ['css', 'sass?indentedSyntax=true']

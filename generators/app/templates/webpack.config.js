@@ -14,8 +14,15 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loader: 'babel-loader',
+      exclude: /(node_modules|bower_components)/,
       query: {
-        presets: ['es2015']
+        plugins: [
+          'transform-runtime',
+          'add-module-exports',
+          'transform-decorators-legacy'
+        ],
+        presets: ['es2015', 'stage-0'],
+        cacheDirectory: './.tmp'
       }
     }, {
       test: /\.sass$/,

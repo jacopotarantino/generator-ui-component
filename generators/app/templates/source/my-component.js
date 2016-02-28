@@ -3,6 +3,7 @@
 import { UIComponent } from './ui-component.js'
 import component_styles from './styles.sass'
 import large_markup_blob from './large-markup-block.jade'
+import { deprecate } from 'core-decorators'
 
 /*
  * Provides assistance that doesn't need to be in the class.
@@ -32,6 +33,7 @@ export class MyComponent extends UIComponent {
   /**
    * Puts this component on the page with a custom render method.
    */
+  @deprecate
   render () {
     let header = document.querySelector('#the-header')
     header
