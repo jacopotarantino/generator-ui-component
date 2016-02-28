@@ -9,6 +9,14 @@ let app_server = require('http').createServer(function (request, response) {
 })
 const TEST_APP_PORT = 8082
 
+const fs = require('fs')
+const path = require('path')
+const selenium_module_folder = './node_modules/protractor/selenium'
+let selenium_jar = fs.readdirSync(selenium_module_folder).filter(file => {
+  return file.includes('selenium-server-standalone')
+}).pop()
+selenium_jar = path.join(__dirname, selenium_module_folder, selenium_jar)
+
 exports.config = {
   capabilities: {
     // You can use other browsers
@@ -16,13 +24,13 @@ exports.config = {
     'browserName': 'phantomjs'
   },
   baseUrl: `http://localhost:${TEST_APP_PORT}`,
-  seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.48.2.jar',
+  seleniumServerJar: selenium_jar,
   seleniumArgs: [],
   specs: [ 'e2e/*-spec.js' ],
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 30000,
-    isVerbose: true,
+    isVerbose: true
   },
   allScriptsTimeout: 20000,
   onPrepare: function () {
