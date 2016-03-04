@@ -7,15 +7,17 @@ var git = require('simple-git')()
 var wrench = require('wrench')
 
 module.exports = yeoman.generators.Base.extend({
+  props: {
+    init_repository: false
+  },
   prompting: function () {
+    var that = this
     // Have Yeoman greet the user.
-    this.log(yosay(
+    that.log(yosay(
       `Welcome to the good ol ${chalk.green('UI Component')} generator!`
     ))
 
-    var done = this.async()
-    var that = this
-
+    var done = that.async()
     var prompts = [{
       type: 'input',
       name: 'component_name',
@@ -30,18 +32,16 @@ module.exports = yeoman.generators.Base.extend({
       type: 'input',
       name: 'author_name',
       message: 'What is the your name?',
-      default: this.user.git.name() || 'Some Cool Person'
+      default: that.user.git.name() || 'Some Cool Person'
     }, {
       type: 'input',
       name: 'author_email',
       message: 'What is the your email address?',
-      default: this.user.git.email() || 'you@company.com'
+      default: that.user.git.email() || 'you@company.com'
     }]
 
-
-    that.prompt(prompts, function (props) {
-      that.props = props
-      // To access props later use this.props.someOption
+    that.prompt(prompts, function (answers) {
+      Object.assign(that.props, answers)
       done()
     })
   },
@@ -49,7 +49,7 @@ module.exports = yeoman.generators.Base.extend({
   writing: function () {
     var done = this.async()
     var that = this
-    var files = wrench.readdirSyncRecursive(this.sourceRoot())
+    var files = wrench.readdirSyncRecursive(that.sourceRoot())
 
     // for each file in templates
     // copy and parse templates
