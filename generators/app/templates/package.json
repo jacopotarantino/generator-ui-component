@@ -14,7 +14,8 @@
     "build": "./node_modules/.bin/webpack -p -d",
     "start": "./node_modules/.bin/webpack -p -d --watch",
     "install": "./node_modules/.bin/webdriver-manager update",
-    "e2e": "./node_modules/.bin/protractor protractor.config.js"
+    "e2e": "./node_modules/.bin/protractor protractor.config.js",
+    "commit": "git add .; ./node_modules/.bin/git-cz"
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",
@@ -28,9 +29,13 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-preset-stage-1": "^6.5.0",
     "babel-runtime": "^6.5.0",
+    "commitizen": "^2.6.0",
     "core-decorators": "^0.11.0",
     "css-loader": "^0.23.1",
+    "cz-conventional-changelog": "^1.1.5",
     "es6-promise": "3.0.2",
+    "gulp": "^3.9.0",
+    "gulp-git": "^1.7.0",
     "jade": "^1.11.0",
     "jade-loader": "^0.8.0",
     "jasmine-core": "^2.4.1",
@@ -58,5 +63,10 @@
       "**/*-spec.js",
       "protractor.config.js"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
