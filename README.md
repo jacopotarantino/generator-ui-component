@@ -45,6 +45,7 @@ All content copyright © [Jacopo Tarantino](https://jack.ofspades.com). This wor
 
 ## TODO
 
+* nsp
 * Tests for the generator itself
 * Boilerplate CI integration
   * Automatically connect to CI?
@@ -56,6 +57,7 @@ All content copyright © [Jacopo Tarantino](https://jack.ofspades.com). This wor
 * [semantic release](https://github.com/semantic-release/semantic-release)
    * for both the generator and the generated output
 * [commitizen](http://commitizen.github.io/cz-cli/)
+* https://github.com/kentcdodds/validate-commit-msg
 * [david](https://david-dm.org/)
 * readme badges
 * [browser sync](https://github.com/Browsersync/browser-sync)?
