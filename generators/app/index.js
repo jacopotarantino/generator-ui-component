@@ -18,6 +18,8 @@ module.exports = yeoman.generators.Base.extend({
     ))
 
     var done = that.async()
+    var that = this
+
     var prompts = [{
       type: 'input',
       name: 'component_name',
@@ -61,7 +63,8 @@ module.exports = yeoman.generators.Base.extend({
       )
     })
 
-    git
+    if (that.init_repository) {
+      git
       .init()
       .addRemote('origin', this.props.repository_path)
       .add(['.'])
@@ -70,6 +73,7 @@ module.exports = yeoman.generators.Base.extend({
         that.log(yosay('Initialized the git repository for you!'))
         done()
       })
+    }
   },
 
   install: function () {
