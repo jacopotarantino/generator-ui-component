@@ -8,8 +8,14 @@ var wrench = require('wrench')
 
 module.exports = yeoman.generators.Base.extend({
   prompting: function () {
+    // Have Yeoman greet the user.
+    this.log(yosay(
+      `Welcome to the good ol ${chalk.green('UI Component')} generator!`
+    ))
+
     var done = this.async()
     var that = this
+
     var prompts = [{
       type: 'input',
       name: 'component_name',
@@ -32,10 +38,6 @@ module.exports = yeoman.generators.Base.extend({
       default: this.user.git.email() || 'you@company.com'
     }]
 
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      `Welcome to the good ol ${chalk.green('UI Component')} generator!`
-    ))
 
     that.prompt(prompts, function (props) {
       that.props = props
