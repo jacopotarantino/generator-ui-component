@@ -19,17 +19,11 @@ module.exports = yeoman.generators.Base.extend({
     ))
 
     var done = that.async()
-
     var prompts = [{
       type: 'input',
       name: 'component_name',
       message: 'What is the component name?',
       default: process.cwd().split('/').pop()
-    }, {
-      type: 'input',
-      name: 'repository_path',
-      message: 'What is the repository url?',
-      default: 'git@github.com:my-name/my-component.git'
     }, {
       type: 'input',
       name: 'author_name',
@@ -42,9 +36,28 @@ module.exports = yeoman.generators.Base.extend({
       default: that.user.git.email() || 'you@company.com'
     }]
 
-    that.prompt(prompts, function (answers) {
-      Object.assign(that.props, answers)
-      done()
+    that.prompt([{
+      type: 'confirm',
+      name: 'init_repository',
+      message: 'Would you like to initialize the repository?',
+      default: true
+    }], function (answers) {
+      that.props = answers
+
+      if (answers.init_repository) {
+        prompts.unshift({
+          type: 'input',
+          name: 'repository_path',
+          message: 'What is the repository url?',
+          default: 'git@github.com:my-name/my-component.git'
+        })
+      }
+
+      that.prompt(prompts, function (props) {
+        Object.assign(that.props, props)
+        // To access props later use this.props.someOption
+        done()
+      })
     })
   },
 

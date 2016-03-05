@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "<%= component_name %> UI Component",
   "main": "index.js",
-  "repository": "<% if (init_repository) { %>
-    <%= repository_path %>
-  <% } %>",
+  "repository": "<% if (init_repository) { %><%= repository_path %><% } %>",
   "license": "UNLICENSED",
   "author": "<%= author_name %> <<%= author_email %>>",
   "scripts": {

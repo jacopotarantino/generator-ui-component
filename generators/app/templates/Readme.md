@@ -9,9 +9,8 @@ This creates a new <%= component_name %>
 * Java
 
 ## Install and run
-<% if (init_repository) { %>
-<%= '* `git clone ' + repository_path + '`' %>
-<% } %>
+
+<% if (init_repository) { %><%= '* `git clone ' + repository_path + '`' %><% } %>
 * `cd <%= component_name %>`
 * `npm install`
 * `npm test`
