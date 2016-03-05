@@ -7,18 +7,18 @@ var git = require('simple-git')()
 var wrench = require('wrench')
 
 module.exports = yeoman.generators.Base.extend({
-  props: {
-    init_repository: false
-  },
   prompting: function () {
     var that = this
+    that.props = {
+      init_repository: false
+    }
+
     // Have Yeoman greet the user.
     that.log(yosay(
       `Welcome to the good ol ${chalk.green('UI Component')} generator!`
     ))
 
     var done = that.async()
-    var that = this
 
     var prompts = [{
       type: 'input',
@@ -63,7 +63,7 @@ module.exports = yeoman.generators.Base.extend({
       )
     })
 
-    if (that.init_repository) {
+    if (that.props.init_repository) {
       git
       .init()
       .addRemote('origin', this.props.repository_path)
@@ -73,6 +73,8 @@ module.exports = yeoman.generators.Base.extend({
         that.log(yosay('Initialized the git repository for you!'))
         done()
       })
+    } else {
+      done()
     }
   },
 
