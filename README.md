@@ -55,9 +55,7 @@ All content copyright © [Jacopo Tarantino](https://jack.ofspades.com). This wor
   * automatic sending of code coverage stats
 * [semantic release](https://github.com/semantic-release/semantic-release)
    * for both the generator and the generated output
-* [commitizen](http://commitizen.github.io/cz-cli/)
 * https://github.com/kentcdodds/validate-commit-msg
-* [david](https://david-dm.org/)
 * readme badges
 * [browser sync](https://github.com/Browsersync/browser-sync)?
 * replace livereload with that and parallelshell
