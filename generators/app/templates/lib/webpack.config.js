@@ -1,14 +1,17 @@
 'use strict'
 
-const LiveReloadPlugin = require('webpack-livereload-plugin')
-const JSDocPlugin = require('./lib/jsdoc-plugin.js')
+const webpack = require('webpack')
+// const JSDocPlugin = require('./jsdoc-plugin.js')
 require('es6-promise').polyfill()
 
 module.exports = {
+  debug: true,
+  devtool: '#eval-source-map',
   entry: './index.js',
   output: {
     path: __dirname + '/dist',
-    filename: 'index.js'
+    filename: 'index.js',
+    publicPath: '/dist'
   },
   module: {
     loaders: [{
@@ -33,7 +36,8 @@ module.exports = {
     }]
   },
   plugins: [
-    new LiveReloadPlugin(),
-    new JSDocPlugin()
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.NoErrorsPlugin()
+//    new JSDocPlugin()
   ]
 }

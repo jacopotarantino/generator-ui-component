@@ -25,7 +25,7 @@ This will run standard, karma, protractor, nsp, and jsdoc. Webpack uses sass, ja
 
 ## Run a watcher for development
 
-This just runs a watcher for Webpack/Babel. It does not start an HTTP server. You can, however, point a browser at your `index.html` file and see your component running there. The `index.html` file is mostly intended for local testing and manual QA.
+This starts a browsersync server running on `localhost:3000`. It serves files out of the current directory and automatically opens a tab in your browser showing off the index page. The `index.html` file is mostly intended for local testing and manual QA.
 
 * `npm start`
 

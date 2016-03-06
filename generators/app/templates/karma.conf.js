@@ -1,5 +1,7 @@
 'use strict'
 
+const webpack_config = require('./lib/webpack.config.js')
+
 module.exports = function (config) {
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -19,31 +21,7 @@ module.exports = function (config) {
     preprocessors: {
       'test-context.js': ['webpack', 'coverage']
     },
-    webpack: {
-      module: {
-        loaders: [{
-          test: /\.js/,
-          exclude: /node_modules/,
-          loader: 'babel-loader',
-          query: {
-            plugins: [
-              'transform-runtime',
-              'add-module-exports',
-              'transform-decorators-legacy'
-            ],
-            presets: ['es2015', 'stage-0'],
-            cacheDirectory: './.tmp'
-          }
-        }, {
-          test: /\.sass$/,
-          loaders: ['css', 'sass?indentedSyntax=true']
-        }, {
-          test: /\.jade$/,
-          loader: 'jade'
-        }]
-      },
-      watch: true
-    },
+    webpack: webpack_config,
     webpackServer: {
       noInfo: true
     },

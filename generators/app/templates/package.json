@@ -11,8 +11,8 @@
     "unit": "./node_modules/.bin/karma start",
     "lint": "npm run check-dependencies && ./node_modules/.bin/standard",
     "jsdoc": "./node_modules/.bin/jsdoc -p ./source/*.js -d docs",
-    "build": "./node_modules/.bin/webpack -p -d",
-    "start": "./node_modules/.bin/webpack -p -d --watch",
+    "build": "./node_modules/.bin/webpack -p -d --config ./lib/webpack.config.js",
+    "start": "node ./lib/browsersync-server.js",
     "install": "./node_modules/.bin/webdriver-manager update",
     "e2e": "./node_modules/.bin/protractor protractor.config.js",
     "commit": "git add .; ./node_modules/.bin/git-cz && ./node_modules/.bin/validate-commit-msg",
@@ -30,6 +30,8 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-preset-stage-1": "^6.5.0",
     "babel-runtime": "^6.5.0",
+    "browser-sync": "^2.11.1",
+    "bs-fullscreen-message": "^1.0.2",
     "commitizen": "^2.6.0",
     "core-decorators": "^0.11.0",
     "css-loader": "^0.23.1",
@@ -56,8 +58,7 @@
     "sass-loader": "^3.1.2",
     "standard": "^5.4.1",
     "validate-commit-msg": "^2.3.0",
-    "webpack": "^1.12.10",
-    "webpack-livereload-plugin": "^0.4.0"
+    "webpack": "^1.12.10"
   },
   "standard": {
     "ignore": [
