@@ -9,13 +9,14 @@
   "scripts": {
     "test": "npm run build && npm run lint && npm run unit && npm run e2e",
     "unit": "./node_modules/.bin/karma start",
-    "lint": "./node_modules/.bin/standard",
+    "lint": "npm run check-dependencies && ./node_modules/.bin/standard",
     "jsdoc": "./node_modules/.bin/jsdoc -p ./source/*.js -d docs",
     "build": "./node_modules/.bin/webpack -p -d",
     "start": "./node_modules/.bin/webpack -p -d --watch",
     "install": "./node_modules/.bin/webdriver-manager update",
     "e2e": "./node_modules/.bin/protractor protractor.config.js",
-    "commit": "git add .; ./node_modules/.bin/git-cz"
+    "commit": "git add .; ./node_modules/.bin/git-cz",
+    "check-dependencies": "./node_modules/.bin/nsp check"
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",
@@ -49,6 +50,7 @@
     "karma-webpack": "^1.7.0",
     "node-sass": "^3.4.2",
     "node-static": "^0.7.7",
+    "nsp": "^2.2.0",
     "phantomjs": "^1.9.19",
     "protractor": "^3.0.0",
     "sass-loader": "^3.1.2",

@@ -17,7 +17,7 @@ This creates a new <%= component_name %>
 
 ## Testing
 
-This will run standard, karma, protractor, and jsdoc. Webpack uses sass, jade, and babel to wire up your components/requires. jsdoc outputs a compiled static site to `/docs`. Babel transpile the ES6 in `index.js` to ES5 in `dist/index.js` and creates a sourcemap.
+This will run standard, karma, protractor, nsp, and jsdoc. Webpack uses sass, jade, and babel to wire up your components/requires. jsdoc outputs a compiled static site to `/docs`. Babel transpile the ES6 in `index.js` to ES5 in `dist/index.js` and creates a sourcemap.
 
 * `npm test`
 

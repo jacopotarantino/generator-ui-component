@@ -8,7 +8,7 @@
 [daviddm-image]: https://david-dm.org/jacopotarantino/generator-ui-component.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/jacopotarantino/generator-ui-component
 
-> Scaffolds a UI Component with ES6/7, tests, and webpack+babel build. Initializes a git repository. Creates a minimal build process that you can get started with immediately. Includes the CSS and Sass loaders so you can write your styles cleanly and import them just like node modules. Includes the jade-loader so you can write HTML painlessly. And finally includes a demo "base component" to extend from, a demo "event emitter" class to extend from, and webpack support for ES7 features so you can have fun writing JavaScript :).
+> Scaffolds a UI Component with ES6/7, tests, nsp checks, and webpack+babel build. Initializes a git repository. Creates a minimal build process that you can get started with immediately. Includes the CSS and Sass loaders so you can write your styles cleanly and import them just like node modules. Includes the jade-loader so you can write HTML painlessly. And finally includes a demo "base component" to extend from, a demo "event emitter" class to extend from, and webpack support for ES7 features so you can have fun writing JavaScript :).
 
 ## Installation
 
@@ -45,7 +45,6 @@ All content copyright © [Jacopo Tarantino](https://jack.ofspades.com). This wor
 
 ## TODO
 
-* nsp
 * Tests for the generator itself
 * Boilerplate CI integration
   * Automatically connect to CI?
