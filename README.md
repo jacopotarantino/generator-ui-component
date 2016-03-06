@@ -48,14 +48,13 @@ All content copyright © [Jacopo Tarantino](https://jack.ofspades.com). This wor
 * Tests for the generator itself
 * Boilerplate CI integration
   * Automatically connect to CI?
-* Support for react/polymer/angular/events/pouchdb/isomorphism
-* Github pages support
 * Support for codeclimate
   * Automatic setup
   * automatic sending of code coverage stats
+* Support for react/polymer/angular/events/pouchdb/isomorphism
+* Github pages support
 * [semantic release](https://github.com/semantic-release/semantic-release)
    * for both the generator and the generated output
-* https://github.com/kentcdodds/validate-commit-msg
 * readme badges
 * [browser sync](https://github.com/Browsersync/browser-sync)?
 * replace livereload with that and parallelshell

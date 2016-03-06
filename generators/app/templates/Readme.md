@@ -34,3 +34,14 @@ This just runs a watcher for Webpack/Babel. It does not start an HTTP server. Yo
 Run the build to generate dist files and use them as you please.
 
 * `npm build`
+
+## Contributing
+
+* Checkout new branch - `git checkout feature/intent-of-feature`
+* Make changes
+* Run tests - `npm test`
+* Commit changes - `npm run commit` - This uses commitizen and also checks that your commits are valid on the other side.
+* Push changes - `git push`
+* Create pull request
+* Get review
+* Merge changes
