@@ -1,7 +1,7 @@
 'use strict'
 
 const webpack = require('webpack')
-// const JSDocPlugin = require('./jsdoc-plugin.js')
+const JSDocPlugin = require('./jsdoc-plugin.js')
 require('es6-promise').polyfill()
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
   devtool: '#eval-source-map',
   entry: './index.js',
   output: {
-    path: __dirname + '/dist',
+    path: __dirname + '/../dist',
     filename: 'index.js',
     publicPath: '/dist'
   },
@@ -37,7 +37,7 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.NoErrorsPlugin()
-//    new JSDocPlugin()
+    new webpack.NoErrorsPlugin(),
+    new JSDocPlugin()
   ]
 }

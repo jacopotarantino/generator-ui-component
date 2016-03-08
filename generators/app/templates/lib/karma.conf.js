@@ -1,6 +1,6 @@
 'use strict'
 
-const webpack_config = require('./lib/webpack.config.js')
+const webpack_config = require('./webpack.config.js')
 
 module.exports = function (config) {
   config.set({
