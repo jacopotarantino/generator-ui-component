@@ -45,6 +45,7 @@ All content copyright © [Jacopo Tarantino](https://jack.ofspades.com). This wor
 
 ## TODO
 
+* git hooks
 * Tests for the generator itself
 * Boilerplate CI integration
   * Automatically connect to CI?

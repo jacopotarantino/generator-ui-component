@@ -6,11 +6,7 @@ module.exports = class JSDocPlugin {
   apply (compiler) {
     compiler.plugin('done', function () {
       const spawn = require('child_process').spawn
-      const jsdoc = spawn('./node_modules/.bin/jsdoc', [
-        '-p', './source/',
-        '-r',
-        '-d', './docs/'
-      ])
+      const jsdoc = spawn('npm', ['run', 'jsdoc'])
 
       jsdoc.stdout.on('data', (data) => {
         console.log(`stdout: ${data}`)

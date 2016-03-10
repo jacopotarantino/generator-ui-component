@@ -2,7 +2,7 @@
 
 This creates a new <%= component_name %>
 
-![dependency stability](https://david-dm.org/<&= author_name %>/<%= component_name %>.svg)
+![dependency stability](https://david-dm.org/<%= author_name %>/<%= component_name %>.svg)
 
 ## Prerequisites
 
