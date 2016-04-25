@@ -1,9 +1,9 @@
 'use strict'
+/* eslint-env jasmine */
 
 import {MyComponent} from './my-component.js'
 
 describe('MyComponent', () => {
-
   let my_component
 
   beforeEach(() => {
@@ -38,5 +38,4 @@ describe('MyComponent', () => {
       expect(node.innerHTML).toContain('<ul class="list-horizontal"')
     })
   })
-
 })

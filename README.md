@@ -45,6 +45,9 @@ All content copyright © [Jacopo Tarantino](https://jack.ofspades.com). This wor
 
 ## TODO
 
+* use npm postInstall hook to run environment config with `n` and such.
+* VictorBjelkholm/autochecker
+  * is this the same as dylang/npm-check?
 * git hooks
 * Tests for the generator itself
 * Boilerplate CI integration

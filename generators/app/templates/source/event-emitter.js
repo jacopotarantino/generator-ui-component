@@ -57,7 +57,7 @@ export class EventEmitter {
 
     const listeners = this._events[event].slice()
 
-    listeners.forEach(listener => {
+    listeners.forEach((listener) => {
       listener.apply(this, args)
     })
   }

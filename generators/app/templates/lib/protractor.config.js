@@ -12,7 +12,7 @@ const TEST_APP_PORT = 8082
 const fs = require('fs')
 const path = require('path')
 const selenium_module_folder = './node_modules/protractor/selenium'
-let selenium_jar = fs.readdirSync(selenium_module_folder).filter(file => {
+let selenium_jar = fs.readdirSync(selenium_module_folder).filter((file) => {
   return file.includes('selenium-server-standalone')
 }).pop()
 selenium_jar = path.join(__dirname, '../', selenium_module_folder, selenium_jar)
@@ -24,7 +24,7 @@ exports.config = {
     'browserName': 'phantomjs',
     'phantomjs.binary.path': require('phantomjs').path,
     'phantomjs.cli.args': [
-      '--webdriver-loglevel=INFO',
+      '--webdriver-loglevel=INFO'
     ]
   },
   baseUrl: `http://localhost:${TEST_APP_PORT}`,

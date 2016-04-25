@@ -1,5 +1,6 @@
 'use strict'
 
+const path = require('path')
 const webpack = require('webpack')
 const JSDocPlugin = require('./jsdoc-plugin.js')
 require('es6-promise').polyfill()
@@ -9,7 +10,7 @@ module.exports = {
   devtool: '#eval-source-map',
   entry: './index.js',
   output: {
-    path: __dirname + '/../dist',
+    path: path.resolve(__dirname, '/../dist'),
     filename: 'index.js',
     publicPath: '/dist'
   },

@@ -1,10 +1,12 @@
 'use strict'
+/* eslint-env mocha */
+
 var path = require('path')
 var assert = require('yeoman-assert')
 var helpers = require('yeoman-generator').test
 
-describe('generator-ui-component:app', function () {
-  before(function (done) {
+describe('generator-ui-component:app', () => {
+  before((done) => {
     helpers.run(path.join(__dirname, '../generators/app'))
       .withOptions({someOption: true})
       .withPrompts({someAnswer: true})
@@ -14,6 +16,6 @@ describe('generator-ui-component:app', function () {
   it('creates files', function () {
     assert.file([
       'dummyfile.txt'
-    ]);
+    ])
   })
 })
