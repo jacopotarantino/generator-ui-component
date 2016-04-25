@@ -1,0 +1,10 @@
+machine:
+  timezone:
+    America/New_York
+  node:
+    version:
+      5.7.1
+  hosts:
+    circlehost: 127.0.0.1
+  environment:
+    CIRCLE_ENV: test
