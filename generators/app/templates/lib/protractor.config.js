@@ -34,11 +34,18 @@ exports.config = {
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 30000,
-    isVerbose: true
+    isVerbose: true,
+    print: function () {}
   },
   allScriptsTimeout: 20000,
   onPrepare: function () {
     browser.ignoreSynchronization = true
+
+    // add jasmine spec reporter
+    var SpecReporter = require('jasmine-spec-reporter')
+    jasmine.getEnv().addReporter(new SpecReporter({
+      displayStacktrace: 'all'
+    }))
   },
   beforeLaunch: function () {
     // start the app server
