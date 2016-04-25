@@ -20,36 +20,29 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
-    "simple-git": "^1.21.0",
+    "simple-git": "^1.31.0",
     "wrench": "^1.5.8",
-    "yeoman-generator": "^0.21.1",
+    "yeoman-generator": "^0.22.5",
     "yosay": "^1.0.2"
   },
   "devDependencies": {
-    "commitizen": "^2.6.0",
+    "commitizen": "^2.7.3",
     "cz-conventional-changelog": "^1.1.5",
-    "eslint-config-xo-space": "^0.7.0",
-    "gulp": "^3.9.0",
-    "gulp-eslint": "^1.0.0",
+    "gulp": "^3.9.1",
     "gulp-exclude-gitignore": "^1.0.0",
     "gulp-git": "^1.7.0",
     "gulp-istanbul": "^0.10.3",
     "gulp-mocha": "^2.0.0",
-    "gulp-nsp": "^2.1.0",
-    "gulp-plumber": "^1.0.0",
-    "nsp": "^2.2.0",
+    "gulp-nsp": "^2.3.1",
+    "gulp-plumber": "^1.1.0",
+    "nsp": "^2.2.1",
+    "standard": "^6.0.8",
     "yeoman-assert": "^2.0.0"
-  },
-  "eslintConfig": {
-    "extends": "xo-space",
-    "env": {
-      "mocha": true
-    }
   },
   "repository": "jacopotarantino/generator-ui-component",
   "scripts": {
     "prepublish": "gulp prepublish",
-    "test": "gulp",
+    "test": "./node_modules/.bin/standard && ./node_modules/.bin/gulp",
     "commit": "./node_modules/.bin/git-cz"
   },
   "config": {
@@ -59,9 +52,11 @@
   },
   "standard": {
     "ignore": [
-      "docs/",
-      "dist/",
       "node_modules/"
+    ],
+    "globals": [
+      "browser", "element",
+      "describe", "it", "expect"
     ]
   }
 }
