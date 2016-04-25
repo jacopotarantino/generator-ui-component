@@ -32,9 +32,7 @@ export class MyComponent extends UIComponent {
 
   /**
    * Puts this component on the page with a custom render method.
-   * @deprecated this will be removed in a future version
    */
-  @deprecate
   render () {
     let header = document.querySelector('#the-header')
     header
